@@ -150,7 +150,7 @@ def get_times(route_stops, sqlite_filedb, set_limit):
         req_stop_name = stop_data[2]
 
         croutes.execute(
-            "SELECT agency_id, route_id from routes WHERE route_short_name=:route AND agency_id=:operator",
+            "SELECT agency_id, route_id from routes WHERE route_id=:route AND agency_id=:operator",
             {"route": req_route, "operator": req_operator},
         )
 
